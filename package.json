@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "**Project:** Eat-Da-Burger\r **Goal of this Project:** Welcome to Eat-Da-Burger! This restaurant app allows users to input the names of the burgers they'd like to eat.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buelowek1225/BurgerLogger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buelowek1225/BurgerLogger/issues"
+  },
+  "homepage": "https://github.com/buelowek1225/BurgerLogger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1"
+  }
+}
