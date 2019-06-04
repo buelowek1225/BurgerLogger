@@ -1,0 +1,35 @@
+<div class = jumbotron>
+    <h1>Eat-Da-Burger</h1>
+    <p>Add a burger or devour it!</p>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <img src="/assets/img/burgerattempt2.png" class="burgerImage">
+    </div>
+</div>
+<!-- form -->
+<ul>
+  {{#each allBurgers}}
+    {{#unless devoured}}
+      <li>{{this.burger_name}}{{this.devoured}}</li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<div class="row">
+    <div class="col-md-12">
+        <form class="buttonSubmit">
+            <br>
+            <br>
+            <div class="form-group">
+                <label for="bn">Enter Your Favorite Burger!</label>
+                <textarea class="form-control" id="bn" rows="3"></textarea>
+            </div>
+            <button type="submit">Add Your Burger!</button>
+        </form>
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <p><a href="https://github.com/buelowek1225/burger">GitHub Repo</a></p>
+</div>

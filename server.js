@@ -1,32 +1,27 @@
-// ===============================boiler plate=======================================
-const express = require('express');
+var express = require("express");
 
-// port
-const PORT = process.env.PORT || 8080;
-const app = express();
+var PORT = process.env.PORT || 3000;
 
-app.use(express.urlencoded({ extended: true}));
+var app = express();
+
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
+
+// Parse request body as JSON
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// forces my app to look in the public folder first static command/function
-app.use(express.static("app/public"));
+// Set Handlebars.
+var exphbs = require("express-handlebars");
 
-// ===============================end boiler plate=======================================
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
-// if I don't find the reference in the public folder look at the path and return the relative htmls
-// require("./app/routing/apiRoutes")(app);
+// Import routes and give the server access to them.
+var routes = require("./controllers/burger_controllers");
 
-require("../burger/public/")
+app.use(routes);
 
-
-
-
-
-// ===============================boiler plate=======================================
-
-// Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
-    // Log (server-side) when our server has started
-    console.log("Server listening on: http://localhost:" + PORT);
+  console.log("App now listening at localhost:" + PORT);
 });
-// ===============================end boiler plate=======================================

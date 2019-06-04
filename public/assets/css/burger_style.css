@@ -24,3 +24,7 @@ body {
 .buttonSubmit {
   text-align: center;
 }
+
+.burgerImage {
+  width: 200px;
+}
