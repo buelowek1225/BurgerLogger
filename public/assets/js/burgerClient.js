@@ -17,5 +17,22 @@ $(function() {
             }
         )
     });
+
+    $(".devour-burger").on("click", function(event) {
+        var id = $(this).data("id");
+   
+        // Send the PUT request.
+        $.ajax("/api/burgers/" + id, {
+          type: "PUT",
+        //   not sending data so we insert empty object
+          data: {}
+        }).then(
+          function() {
+            console.log("changed");
+            // Reload the page to get the updated list
+            location.reload();
+          }
+        );
+    });
 });
-  
+

@@ -2,19 +2,42 @@
     <h1>Eat-Da-Burger</h1>
     <p>Add a burger or devour it!</p>
 </div>
-<div class="row">
+<div class="row text-center">
     <div class="col-md-12">
-        <img src="/assets/img/burgerattempt2.png" class="burgerImage">
+        <img class="center-block burgerImage" src="/assets/img/burgerattempt2.png">
     </div>
 </div>
-<!-- form -->
-<ul>
-  {{#each allBurgers}}
-    {{#unless devoured}}
-      <li>{{this.burger_name}}{{this.devoured}}</li>
-    {{/unless}}
-  {{/each}}
-</ul>
+{{!-- burgers to eat --}}
+<div class="row" >
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-4">
+        <ul>
+        {{#each allBurgers}}
+            {{#unless devoured}}
+                <li>{{this.burger_name}}</li>
+                <button class="devour-burger" data-id="{{id}}">
+                    Devour Burger!
+                </button>
+                <br>
+                <br>
+            {{/unless}}
+        {{/each}}
+        </ul>
+    </div>
+    <div class = "col-sm-4">
+        {{!-- burgers devoured --}}
+        <ul>
+        {{#each allBurgers}}
+            {{#if devoured}}
+            <li>{{this.burger_name}}</li>
+            {{/if}}
+        {{/each}}
+        </ul>
+    </div>
+    <div class="col-sm-1">
+    </div>
+</div>
 
 <div class="row">
     <div class="col-md-12">
@@ -30,6 +53,11 @@
     </div>
 </div>
 <!-- footer -->
-<div class="footer">
+{{!-- <div class="footer">
     <p><a href="https://github.com/buelowek1225/burger">GitHub Repo</a></p>
-</div>
+</div> --}}
+<footer clas="footer">
+    <div class="container">
+        <span class="text-muted"><a href="https://github.com/buelowek1225/burger">GitHub Repo</a></span>
+    </div>
+</footer>

@@ -28,5 +28,23 @@ router.post("/api/burgers", function(req, res){
         location.reload();
     });
 })
+
+
+
+router.put("/api/burgers/:id", function(req, res) {
+    // got to the request '/api/burgers/' get id
+    console.log(req.params.id)
+    burger.updateOne(req.params.id, function(result){
+        if (result.changedRows === 0) {
+            // if no rows were changed, then the id must not exist, so 404
+            return res.status(404).end();
+        }
+        res.status(200).end();
+    })
+  });
+
+
+
+
 // Export routes for server.js to use.
 module.exports = router;
