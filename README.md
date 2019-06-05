@@ -6,3 +6,7 @@
 **Created by:** Ellen Buelow
 
 **Directions:** Eat-Da-Burger allows users to input the names of the burgers they'd like to eat. Whenever a user submits a burger's name, that burger will dispaly the NEW burger name on the left side of the page (waiting to be DEVOURED). Each burger added to the waiting area has a devour it button. When the user clicks it the burger will move to right side of the page. Ever burger created will be added to the database (devoured or not).
+
+**Future work:** Setup working Heroku connection. Possible fixes: Review instrucitons and database setup. Check that the right database name is in all appropriate locations. Check if favicon is a problem. 
+
+
