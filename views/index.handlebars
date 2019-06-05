@@ -12,6 +12,7 @@
     <div class="col-sm-3">
     </div>
     <div class="col-sm-4">
+        <h6>BURGERS TO DEVOUR:</h6>
         <ul>
         {{#each allBurgers}}
             {{#unless devoured}}
@@ -27,6 +28,7 @@
     </div>
     <div class = "col-sm-4">
         {{!-- burgers devoured --}}
+        <h6>DECOURED BURGERS:</h6>
         <ul>
         {{#each allBurgers}}
             {{#if devoured}}
@@ -52,6 +54,9 @@
         </form>
     </div>
 </div>
+<br>
+<br>
+<br>
 <!-- footer -->
 {{!-- <div class="footer">
     <p><a href="https://github.com/buelowek1225/burger">GitHub Repo</a></p>
